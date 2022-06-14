@@ -16,6 +16,8 @@
         <label  id="nhietDo" type="text" ></label>  <br> <br>
         <label>Độ ẩm:</label> 
         <label  id="doAm" type="text"></label>  <br> <br>
+        <label>Trạng thái sò:</label> 
+        <label  id="so" type="text"></label>  <br> <br>
 
 
         <hr>
@@ -58,6 +60,7 @@
             //Reference
             var nhietDo = document.getElementById("nhietDo");
             var doAm = document.getElementById("doAm");
+            var so = document.getElementById("so");
             // var namebox = document.getElementById("NameBox");
             // var rollbox = document.getElementById("Rollbox");
             // var secbox = document.getElementById("Secbox");
@@ -93,6 +96,7 @@
                     if(snapshot.exists()){
                         nhietDo.innerHTML = snapshot.val().temp;
                         doAm.innerHTML = snapshot.val().humi;
+                        so.innerHTML = snapshot.val().so;
                     } else {
                         alert("No data found");
                     }
